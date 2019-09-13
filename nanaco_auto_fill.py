@@ -24,7 +24,7 @@ class NanacoAutoFiller:
         self.__driver.implicitly_wait(3)
         # ログインに必要な情報を読み込む
         with open('.secret') as f:
-            self.__CREDENTIALS = f.read().strip().split('\t')
+            self.__CREDENTIALS = f.read().splitlines()
         # コードを全て取得する
         with open('.giftcodes') as f:
             self.__codes = f.read().splitlines()
@@ -115,6 +115,7 @@ class NanacoAutoFiller:
             register_page_handle = self.__get_register_page_handle()
             self.__driver.switch_to.window(register_page_handle)
 
+            print(f"Inputing: {code}")
             self.__input_codes(code)
             self.__go_to_register_confirm_page()
 
