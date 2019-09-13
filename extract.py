@@ -1,4 +1,4 @@
-raw = open('raw_giftcodes.txt', 'r')
+raw = open('.raw_giftcodes.txt', 'r')
 target = open('.giftcodes', 'w')
 
 ans = 0
