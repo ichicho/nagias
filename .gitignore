@@ -2,3 +2,6 @@ env/
 .secret
 .giftcodes
 *.png
+.DS_Store
+__pycache__
+.raw_giftcodes

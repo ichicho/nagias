@@ -12,5 +12,6 @@ while(True):
         print(line, end='')
         target.write(line)
         ans += 1
+    cnt += 1
 
 print(ans)
