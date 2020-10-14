@@ -6,7 +6,7 @@
   - `/Applications` 直下におく
   - 使いたい方だけ入れれば問題ない（デフォルトはChromeを利用する）
 - 以下の手順に従ってselenium等を導入
-```
+```zsh
 git clone git@github.com:kadoyau/nagias.git
 cd nagias
 
@@ -24,6 +24,7 @@ PLATFORM=mac64
 VERSION=$(curl http://chromedriver.storage.googleapis.com/LATEST_RELEASE)
 curl http://chromedriver.storage.googleapis.com/$VERSION/chromedriver_$PLATFORM.zip \
 | bsdtar -xvf - -C env/bin/
+chmod u+x env/bin/chromedriver
 
 # 実行確認
 chromedriver
